@@ -20,7 +20,7 @@ export default function TextForm(props) {
         let newText = text.toLocaleLowerCase();
         setText(newText);
     }
-    const [text,setText] = useState('Enter text here');
+    const [text,setText] = useState('');
   return (
     <>
     <div className="container">
@@ -35,7 +35,7 @@ export default function TextForm(props) {
     </div>
 
     <div className="container my-3">
-        <h1>Your Text summary</h1>
+        <h2>Your Text summary</h2>
         <p>{text.length!=0 ? text.split(" ").length : 0} words, and {text.length} characters</p>
         <p>{0.008 * text.split(" ").length} minutes it will take you to read it.</p>
         <h2>Preview</h2>
